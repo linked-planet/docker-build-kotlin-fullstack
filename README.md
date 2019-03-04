@@ -1,2 +1,2 @@
 # docker-build-kotlin-fullstack
-Docker image to build Kotlin fullstack applications
+Docker image to build Kotlin fullstack applications.

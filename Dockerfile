@@ -12,6 +12,10 @@ ENV JAVA_ALPINE_VERSION 11.0.4
 RUN apk add --no-cache \
     "openjdk11-jdk>$JAVA_ALPINE_VERSION" --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
 
+RUN apk install "aws-cli" 
+
+RUN apk install "redis" 
+
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk \
     PATH="/usr/lib/jvm/java-11-openjdk/bin:$PATH"
 

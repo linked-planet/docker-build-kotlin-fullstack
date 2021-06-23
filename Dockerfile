@@ -1,6 +1,14 @@
 FROM node:12-alpine
 
 # ---------------------------------------------
+# INSTALL MISC TOOLS
+# ---------------------------------------------
+RUN apk add --no-cache --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community" \
+    "aws-cli" \
+    "redis" \
+    "maven"
+
+# ---------------------------------------------
 # INSTALL JDK-11
 # ---------------------------------------------
 
@@ -12,16 +20,10 @@ ENV JAVA_ALPINE_VERSION 11.0.4
 RUN apk add --no-cache \
     "openjdk11-jdk>$JAVA_ALPINE_VERSION" --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
 
-RUN apk add --no-cache \
-    "aws-cli" --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
-RUN apk add --no-cache \
-    "redis" --repository="http://dl-cdn.alpinelinux.org/alpine/edge/community"
-
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk \
     PATH="/usr/lib/jvm/java-11-openjdk/bin:$PATH"
 
-RUN echo "Testing Java installation" \
-    && javac --version
+RUN echo "Testing Java installation" && javac --version
 
 # ---------------------------------------------
 # INSTALL GRADLE
@@ -49,4 +51,3 @@ RUN set -o errexit -o nounset \
     && gradle --version
 
 CMD ["gradle"]
-

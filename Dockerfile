@@ -7,6 +7,7 @@ RUN apk add --no-cache --repository="http://dl-cdn.alpinelinux.org/alpine/edge/c
     "aws-cli" \
     "redis" \
     "git" \
+    "openssh-client" \
     "maven"
 
 # ---------------------------------------------

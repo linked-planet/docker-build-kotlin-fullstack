@@ -9,4 +9,4 @@ Docker image to build Kotlin fullstack applications.
 - AWS CLI
 - Redis CLI
 - Maven
-- Git (incl. OpenSSH)
+- Git (incl. OpenSSH, git-lfs)

@@ -11,7 +11,8 @@ RUN apk add --no-cache --repository="http://dl-cdn.alpinelinux.org/alpine/edge/c
     "openssh-client" \
     "maven" \
     "curl" \
-    "jq"
+    "jq" \
+    "bash"
 
 # ---------------------------------------------
 # INSTALL JDK-11

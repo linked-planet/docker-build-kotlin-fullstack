@@ -37,7 +37,7 @@ RUN echo "Testing Java installation" && javac --version
 # ---------------------------------------------
 
 ENV GRADLE_HOME /opt/gradle
-ENV GRADLE_VERSION 5.5.1
+ENV GRADLE_VERSION 7.4.1
 
 ARG GRADLE_DOWNLOAD_SHA256=222a03fcf2fcaf3691767ce9549f78ebd4a77e73f9e23a396899fb70b420cd00
 RUN set -o errexit -o nounset \

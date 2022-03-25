@@ -1,9 +1,9 @@
 # docker-build-kotlin-fullstack
 Docker image to build Kotlin fullstack applications.
 
-- Gradle 5.5
+- Gradle 7.4
 - OpenJDK 11
-- Node 12
+- Node 14
 
 ## Included Tools
 - AWS CLI
